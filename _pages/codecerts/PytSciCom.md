@@ -1,0 +1,1 @@
+I took some time to keep my skills on [Scientific Computing](https://freecodecamp.org/certification/Karl_Pelka/scientific-computing-with-python-v7) fresh with the course at [freecodecamp](https://www.freecodecamp.org).

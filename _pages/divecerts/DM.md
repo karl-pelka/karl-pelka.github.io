@@ -1,0 +1,1 @@
+During the summer of 2022, I had some time off on the weekends which enabled me to do and finish my [Divemaster](https://achievements.padi.com/b41cec0e-e47a-4dad-8f83-f674659af296) training at [Diveshack](https://www.divemalta.com).

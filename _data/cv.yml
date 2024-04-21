@@ -2,96 +2,185 @@
   type: map
   contents:
     - name: Full Name
-      value: Karl Andreas Pelka
+      value: Dr. Karl Andreas Pelka
     - name: Date of Birth
       value: 24th September 1990
+    - name: Place of Birth
+      value: Regensburg, Germany
     - name: Languages
       value: German, English, French
+    - name: Nationality
+      value: German
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Malta, Malta
+    - title: PhD in Physics
+      institution: University of Malta, Msida, Malta
       year: 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        "Thesis: ''Cooperative effects in opto- and nanomechanics''"
+    - title: M.Sc. in Physics
+      institution: Friedrich-Alexander-Universität Erlangen-Nürnberg, Erlangen, Germany
+      year: 2017
       description:
-        - Description 1.
-        - Description 2.
+        "Thesis: ''Prime Number Decomposition using the Talbot Effect in First and Second Order Intensity Correlation''"
+    - title: Exchange semester with ERASMUS+
+      institution: Université Joseph Fourier, Grenoble, France
+      year: 2015
+      description:
+        "Project: ''Simulation of biological systems out of thermal equilibrium''"
+    - title: B.Sc. in Physics
+      institution: Friedrich-Alexander-Universität Erlangen-Nürnberg, Erlangen, Germany
+      year: 2014
+      description:
+        "Thesis: ''Implementation of Generalized Gauss Sums using Higher Order Intensity Correlations''"
+    - title: Abitur (A-level)
+      institution: Goethe-Gymnasium Regensburg
+      year: 2010
+      
+    
 
-- title: Experience
+- title: Work Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Support Officer III
+      institution: University of Malta, Msida, Malta
+      year: 2023 - 2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Postdoc in the MQSENS project
+    - title: Teaching Trainee (German&#58; Studienreferendar)
+      institution: Hans-Carossa Gymnasium, Landshut, Germany
+      year: 2023
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Teaching high-school Maths and Physics
+    - title: Research Support Officer II
+      institution: University of Malta, Msida, Malta
+      year: 2021-2022
+    - title: Research Support Officer I
+      institution: University of Malta, Msida, Malta
+      year: 2018 - 2021
+    - title: Working Student (German&#58; Werkstudent)
+      institution: Siemens Corporate Technology E-Aircraft, Erlangen, Germany
+      year: 2016
       description:
+        - Conception, preparation, assembly,  execution, and analysis of experiments with HTS-bulks;
+        - FEM-Simulation of electromagnetic systems;
+        - Analytic sizing of a superconducting DC-motor
+    - title: Teaching Assistant
+      institution: Friedrich-Alexander-University Erlangen-Nürnberg, Erlangen, Germany
+      year: 2015
+      description:
+        - Tutor of Physics Laboratory Class for non-physicists
+    - title: Teaching Assistant
+      institution: Friedrich-Alexander-University Erlangen-Nürnberg, Erlangen, Germany
+      year: 2012-2013
+      description:
+        - Tutor of Problem Class for ''Physics for pharmacists, food chemists and moldecular medics''
+    - title: Rendering civil service (German&#58; Zivildienstleistender)
+      institution: Don Bosco Zentrum, Regensburg, Germany
+      year: 2010-2011
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Peer review referee for
+  type: list
+  contents:
+    - Physical Review Letters, Physical Review X Quantum, Physical Review A, New Journal of Physics, Journal of Optics, Journal of the Optical Society of America A, Physica Scripta
+    
+- title: Further appointments
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Copy Editor for Xjenza
+      year: 2024
+    
 
-- title: Honors and Awards
+- title: Scientific Conference Contributions
   type: time_table
   contents:
-    - year: 1921
+    - year: 2024
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Poster&#58; ''Nonreciprocal entanglement propagation in open multi-mode arrays'', Gordon Research Conference ''Mechanical Systems in the Quantum Regime 2024'', Ventura, USA
+
+    - year: 2022
       items:
-        - Max Planck Medal
+        - Poster&#58; ''Floquet dynamics in multimode optomechanical systems'', Gordon Research Conference ''Mechanical Systems in the Quantum Regime 2022'', Ventura, USA
+        
+    - year: 2021
+      items:
+        - Talk&#58; <i>G. Madiot</i>, Karl Pelka, et. al., ''Floquet dynamics in multimode optomechanical systems'', Gordon Research Conference ''Mechanical Systems in the Quantum Regime 2022'', Ventura, USA
+        
+    - year: 2020
+      items:
+        - Poster&#58; ''Chimera states in small optomechanical arrays'', International Conference on Quantum Optics (Universität Innsbruck), Obergurgl, Austria
+        - Contributed talk&#58; ''Chimera states in small optomechanical arrays'', HOT conference 2020 (EPFL Lausanne), Gstaad, Schweiz
+
+    - year: 2019
+      items:
+        - Contributed talk&#58; ''Chimera states in optomechanical arrays as a consequence of disorder'', School and Workshop on Patterns of Synchrony&#58; Chimera States and Beyond (ICTP Trieste), Trieste, Italy
+        
+    - year: 2018
+      items:
+        - Talk&#58; <i>J. Graf</i>, Karl Pelka, et. al., ''Prime number decomposition using the Talbot effect'', DPG Conference 2018 (FAU Erlangen-Nürnberg), Erlangen, Germany
+
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Optomechanics
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Entanglement propagation
+        - Floquet dynamics
+        - Spontaneously broken symmetry in arrays
+    - title: Near-field optics
       items:
-        - Description 1.
-        - Description 2.
+        - Number theoretical features of the Talbot effect
+    - title: Statistical optics
+      items:
+        - Higher Order Intensity Correlation Talbot effect
+    - title: Non-linear dynamics
+      items:
+        - Chimera states
+        - Order parameters of cluster states
 
-- title: Other Interests
-  type: list
+- title: Science Communication
+  type: time_table
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - year: 2021
+      items:
+        - Talk&#58; Karl Pelka, ''What light quantua know about numbers'', World Quantum Day 2021
+        - Article&#58; Karl Pelka and Tony Apollaro, ''The audience makes a key difference'', Times of Malta
+        
+    - year: 2020
+      items:
+        - Talk&#58; Tony Apollaro and Karl Pelka, ''Secret Quantum Conversation'', European Quantum Week 2020
+        - Article&#58; Karl Pelka, ''A Quantum leap for a machine but a giant step for mankind'', Times of Malta
+        
+    - year: 2018
+      items:
+        - Article&#58; Wayne Chetcuti and Karl Pelka, ''Orchestrating light and controlling matter with optical tweezers'', Times of Malta
+        
+        
+
+- title: Further Qualifications
+  type: nested_list
+  contents:
+    - title: IT Skills
+      items:
+        - Operating Systems&#58; Windows, Linux, Mac OS X
+        - Programming Languages&#58; C, C++, Python, Javascript, LabVIEW
+        - Web development&#58; HTML, CSS, Ruby, Jekyll
+        - Computer Algebra Systems&#58; Mathematica, Maple
+        - Data Processing&#58; MS Office
+        - CAD Software&#58; Siemens NX
+        - FEM Software&#58; MAGNETICS for NX, STAR-CCM+
+        - Documentation&#58; LaTeX, MS Word
+
+    - title: Scuba Diving
+      items:
+        - PADI Specialty Instructor
+        - PADI Open Water Scuba Instructor
+    - title: Hobbies
+      items:
+        - Swimming
+        - Music
+        - Languages
+        - Travelling

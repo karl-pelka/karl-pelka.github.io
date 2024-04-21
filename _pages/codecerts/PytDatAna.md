@@ -1,0 +1,1 @@
+I took some time to introduce myself into [Data analysis with Python](https://freecodecamp.org/certification/Karl_Pelka/data-analysis-with-python-v7) with the course at [freecodecamp](https://www.freecodecamp.org).

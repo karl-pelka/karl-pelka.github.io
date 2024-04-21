@@ -1,71 +1,71 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Karl Pelka",
+    "label": "Physicist",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "karl.a.pelka@um.edu.mt",
+    "phone": "",
+    "url": "https://karl-pelka.github.io/",
+    "summary": "A German-born theoretical physicist and scuba dive instructor",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "Wippenhauser St.",
+      "postalCode": "85354",
+      "city": "Freising",
+      "countryCode": "Germany",
+      "region": ""
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "Google Scholar",
+        "username": "Karl Pelka",
+        "url": "https://scholar.google.com/citations?user=x8Lq-F0AAAAJ&hl=de&oi=ao"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "University of Malta",
+      "position": "Research Support Officer III",
+      "url": "https://quantum.edu.mt",
+      "startDate": "2023-09-01",
+      "endDate": "1925-08-30",
+      "summary": "Postdoc on MQSENS, researching into quantum Zeno dynamics.",
+      "highlights": ["quantum Zeno dynamics"]
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
+      "institution": "University of Malta",
+      "location": "Msida, Malta",
+      "url": "https://www.um.edu.mt/",
+      "area": "Physics",
       "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
-    }
-  ],
-  "awards": [
+      "startDate": "2018-01-15",
+      "endDate": "2022-10-01",
+      "score": "pass",
+    },
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "institution": "Friedrich-Alexander Universität",
+      "location": "Erlangen, Germany",
+      "url": "https://www.fau.de/",
+      "area": "Physics",
+      "studyType": "M.Sc.",
+      "startDate": "2014-10-01",
+      "endDate": "2017-10-01",
+      "score": "1.09",
+    },
+    {
+      "institution": "Friedrich-Alexander Universität",
+      "location": "Erlangen, Germany",
+      "url": "https://www.fau.de/",
+      "area": "Physics",
+      "studyType": "B.Sc.",
+      "startDate": "2011-05-01",
+      "endDate": "2014-09-30",
+      "score": "1.8",
     }
   ],
+
   "certificates": [
     {
       "name": "Machine Learning",
@@ -112,39 +112,59 @@
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+        "name": "Cooperative Effects in opto- and nanomechanics",
+        "publisher": "University of Malta",
+        "releaseDate": "2023-08-10",
+        "url": "https://www.um.edu.mt/library/oar/handle/123456789/104244",
+        "summary": "This thesis presents works in optomechanics which describes the interaction of electromagnetic radiation with massive objects through radiation pressure."
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+        "name": "Floquet control of optomechanical bistability in multimode systems",
+        "publisher": "Physical Review Letters",
+        "releaseDate": "2022-09-14",
+        "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.123603",
+        "summary": "Like in photonic lasers, phonon lasing normally occurs in a single mechanical mode. We show here that mode-locked, multimode phonon lasing can be established in a multimode optomechanical system through Floquet dynamics induced by a temporally modulated laser drive."
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "Floquet phonon lasing in multimode optomechanical systems",
+      "publisher": "Physical Review Letters",
+      "releaseDate": "2021-08-10",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.073601",
+      "summary": "Like in photonic lasers, phonon lasing normally occurs in a single mechanical mode. We show here that mode-locked, multimode phonon lasing can be established in a multimode optomechanical system through Floquet dynamics induced by a temporally modulated laser drive."
+    },
+    {
+        "name": "Floquet dynamics in photonic crystal optomechanical nanoresonator",
+        "publisher": "The European Conference on Lasers and Electro-Optics",
+        "releaseDate": "2021-06-21",
+        "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.123603",
+        "summary": "We explore the interaction between a mechanical resonator and a modulated thermo-optic cavity, using an integrated photonic crystal nanomembrane. These results open perspectives in the realization of logic gates using multimode optomechanical devices."
+    },
+    {
+      "name": "Chimera states in small optomechanical arrays",
+      "publisher": "Physical Review Research",
+      "releaseDate": "2020-02-25",
+      "url": "https://journals.aps.org/prresearch/pdf/10.1103/PhysRevResearch.2.013201",
+      "summary": "We study the dynamics of optomechanical arrays—networks of mechanically compliant structures that interact with the radiation pressure force—which are driven to self-oscillation. We demonstrate that this system supports the existence of long-lived chimera states, where parts of the array synchronize while others do not."
+    },
+    {
+      "name": "Prime number decomposition using the Talbot effect",
+      "publisher": "Optics Express",
+      "releaseDate": "2018-06-11",
+      "url": "https://opg.optica.org/oe/fulltext.cfm?uri=oe-26-12-15009&id=390053",
+      "summary": "We report on prime number decomposition by use of the Talbot effect, a well-known phenomenon in classical near field optics whose description is closely related to Gauss sums. The new algorithm is experimentally verified and the limits of the approach are discussed."
     }
   ],
   "skills": [
     {
       "name": "Physics",
-      "level": "Master",
+      "level": "Postdoctoral",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+          "Quantum optomechanics",
+          "Quantum optics",
+          "Quantum information",
+          "Statistical optics",
+          "Non-linear dynamics"
       ]
     }
   ],
@@ -156,6 +176,11 @@
     },
     {
       "language": "English",
+      "fluency": "Native-like",
+      "icon": ""
+    },
+    {
+      "language": "French",
       "fluency": "Fluent",
       "icon": ""
     }
@@ -165,34 +190,21 @@
       "name": "Physics",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Quantum optomechanics",
+        "Quantum optics",
+        "Quantum information",
+        "Statistical optics",
+        "Non-linear dynamics"
       ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
+      "name": "Quantum Zeno Dynamics",
       "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
+      "highlights": ["Quantum optics"],
+      "startDate": "2024-09-01",
+      "endDate": "2025-09-01",
       "url": "https://example.com"
     }
   ]

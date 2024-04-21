@@ -1,0 +1,1 @@
+During 2023, I had some time off that allowed me to enter the IDC at [Diveshack](https://www.divemalta.com). As part of the IDC, it is mandatory to do a training for the [Emergency First Response Instructor](https://achievements.padi.com/a42e1941-8c11-4a34-acc1-2839d65a9af3) which I finished.

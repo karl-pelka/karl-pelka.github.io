@@ -1,0 +1,1 @@
+I took some time to keep up to date in Python with the course on [College Algebra with Python](https://freecodecamp.org/certification/Karl_Pelka/college-algebra-with-python-v8) at [freecodecamp](https://www.freecodecamp.org).

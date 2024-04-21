@@ -5,16 +5,30 @@ layout: default
   <div class="post">
     <header class="post-header">
       <h1 class="post-title">
-        {{ page.title }}
+        <h2 style="text-align:left;">
+	{{ page.titleE }}
         {% if page.cv_pdf %}
           <a
             href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}"
             target="_blank"
             rel="noopener noreferrer"
-            class="float-right"
+            class="float-none"
             ><i class="fa-solid fa-file-pdf"></i
           ></a>
         {% endif %}
+        {% if page.cv_pdfG %}
+	<span style="float:right;">
+	  {{ page.titleG }}
+          <a
+            href="{{ page.cv_pdfG | prepend: 'assets/pdf/' | relative_url}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="float-none"
+            ><i class="fa-solid fa-file-pdf"></i
+          ></a>
+	</span>
+        {% endif %}
+	</h2>
       </h1>
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>

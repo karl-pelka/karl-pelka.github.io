@@ -1,0 +1,1 @@
+I took some time to introduce myself into Javascript with the course on [Algorithms and Data Structures](https://freecodecamp.org/certification/Karl_Pelka/javascript-algorithms-and-data-structures) at [freecodecamp](https://www.freecodecamp.org).

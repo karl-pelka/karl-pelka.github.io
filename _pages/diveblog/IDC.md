@@ -1,0 +1,1 @@
+Two stressful weeks during an IDC. Following this phase qualifies you for your Instructor Examination to become an [Open Water Scuba Instructor](https://achievements.padi.com/d4f30587-c98a-49af-b743-a217d1132f43).

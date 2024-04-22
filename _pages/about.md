@@ -22,6 +22,6 @@ I am a quantum physicist interested in quantum optomechanics, quantum informatio
 
 For now, my postdoctoral journey brought me back to the University of Malta to work within the MQSENS project on the dynamics of bosonic modes forced into subspaces through repeated measurements, the so-called quantum Zeno dynamics, and on entanglement propagation in non-reciprocal bosonic arrays among other activities in the Department of Physics.
 
-I read for my PhD at the University of Malta working on on cooperative effects in nano- and optomechanics and studied for my BSc and MSc in Physics at the Friedrich-Alexander-Universität (Erlangen, Germany) specialising in quantum optics, quantum information and statistical optics both theoretically and experimentally. 
+I read for my PhD at the University of Malta working on cooperative effects in nano- and optomechanics and studied for my BSc and MSc in Physics at the Friedrich-Alexander-Universität (Erlangen, Germany) specialising in quantum optics, quantum information and statistical optics both theoretically and experimentally. 
 
 

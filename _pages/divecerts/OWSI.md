@@ -1,1 +1,1 @@
-During 2023, I had some time off that allowed me to enter the IDC at [Diveshack](https://www.divemalta.com). Two stressful weeks and an Instructor Examination later I became an [Open Water Scuba Instructor](https://achievements.padi.com/d4f30587-c98a-49af-b743-a217d1132f43).
+Two stressful weeks during an IDC and an Instructor Examination are necessary to become an [Open Water Scuba Instructor](https://achievements.padi.com/d4f30587-c98a-49af-b743-a217d1132f43).

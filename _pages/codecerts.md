@@ -24,4 +24,14 @@ profiles:
     content: codecerts/PytSciCom.md
     image_circular: false # crops the image to make it circular
     more_info: > 
+  - align: left
+    image: codecerts/PytColAlg.png
+    content: codecerts/PytColAlg.md
+    image_circular: false # crops the image to make it circular
+    more_info: > 
+  - align: right
+    image: codecerts/ResWebDev.png
+    content: codecerts/ResWebDev.md
+    image_circular: false # crops the image to make it circular
+    more_info: > 
 ---

@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-04-01 11:59:00-0400
+date: 2024-03-08 11:59:00-0400
 inline: true
 related_posts: false
 ---
 
-New role as copy editor for Xjenza.
+Quantumalta at the GRC on "Mechanical systems in the Quantum Regime".

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Highlights from Delimara
-description: Rugged Landscapes and unique colors in Malta 
-img: assets/img/DiveDelimara.jpeg
+title: Highlights from Ghar Lapsi
+description: Marvellous caves and nice reefs in Malta 
+img: assets/img/DiveGharLapsi.jpeg
 importance: 12
 category: diving
 ---

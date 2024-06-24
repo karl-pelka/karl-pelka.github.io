@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Highlights in Zurrieq
-description: Have your mind blown
-img: assets/img/DiveZurrieq.jpeg
+title: Highlights in Sliema
+description: Good times in Sliema
+img: assets/img/DiveSliema.jpeg
 importance: 6
 category: diving
 ---
 
-ASDF
+Sliema is the touristic heart of Malta and the home of the Diveshack, where I did a lot of my training.

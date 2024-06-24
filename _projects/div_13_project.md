@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Whitsunday islands, Australia
-description: Crikey, mate! Airlie Beach is a beauty! 
-img: assets/img/DiveWhitsundays.jpeg
+title: Highlights from Delimara
+description: Rugged Landscapes and unique colors in Malta 
+img: assets/img/DiveDelimara.jpeg
 importance: 13
 category: diving
 ---

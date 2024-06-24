@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Salvador, Brazil
-description: Catching up and descending in Salvador and its history
-img: assets/img/DiveSalvador.jpg
+title: California, USA
+description: Fun dives around the Channel Islands in Ventura in 2024
+img: assets/img/DiveVentura.jpg
 importance: 2
 category: diving
 ---

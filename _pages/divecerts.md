@@ -10,17 +10,17 @@ profiles:
   # if you want to include more than one profile, just replicate the following block
   # and create one content file for each profile inside _pages/
   - align: right
-    image: divecerts/PADI_OWSI.pdf
+    image: divecerts/PADI_OWSI.jpg
     content: divecerts/OWSI.md
     image_circular: false # crops the image to make it circular
     more_info: >
   - align: left
-    image: divecerts/PADI_EFRI.pdf
+    image: divecerts/PADI_EFRI.jpg
     content: divecerts/EFRI.md
     image_circular: false # crops the image to make it circular
     more_info: > 
   - align: right
-    image: divecerts/PADI_DM.pdf
+    image: divecerts/PADI_DM.jpg
     content: divecerts/DM.md
     image_circular: false # crops the image to make it circular
     more_info: > 

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Highlights in Manoel Island
-description: History a few metres under the surface
-img: assets/img/DiveManoel.jpeg
+title: Highlights in Zurrieq
+description: Have your mind blown
+img: assets/img/DiveZurrieq.jpeg
 importance: 7
 category: diving
 ---

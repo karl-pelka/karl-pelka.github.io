@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Highlights from Valletta
-description: Wreck diving in front of Malta's capital 
-img: assets/img/DiveValletta.jpeg
+title: Highlights from Comino
+description: A ten minute boat-ride to even more Hollywood scenery! 
+img: assets/img/DiveComino.jpeg
 importance: 10
 category: diving
 ---

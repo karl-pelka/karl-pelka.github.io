@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Highlights in Cirkewwa
-description: Some lovely memories from Cirkewwa
-img: assets/img/DiveCirkewwa.jpeg
+title: Instructor Examination
+description: Always keep going
+img: assets/img/IDC.jpeg
 importance: 4
 category: diving
 ---

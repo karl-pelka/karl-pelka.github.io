@@ -13,4 +13,10 @@ profiles:
     content: codeblog/PytMacLea.md
     image_circular: false # crops the image to make it circular
     more_info: >
+  - align: right
+    image: codeblog/empty.png
+    content: codeblog/AIProj.md
+    image_circular: false # crops the image to make it circular
+    more_info: >
+    
 ---

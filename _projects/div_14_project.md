@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Cairns, Australia
-description: Diving the Great Barrier Reef
-img: assets/img/DiveCairns.jpeg
+title: Whitsunday islands, Australia
+description: Crikey, mate! Airlie Beach is a beauty! 
+img: assets/img/DiveWhitsundays.jpeg
 importance: 14
 category: diving
 ---

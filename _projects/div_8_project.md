@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Highlights from Gozo
-description: Scenery that makes Hollywood marvel
-img: assets/img/DiveGozo.jpeg
+title: Highlights in Manoel Island
+description: History a few metres under the surface
+img: assets/img/DiveManoel.jpeg
 importance: 8
 category: diving
 ---

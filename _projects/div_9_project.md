@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Highlights from Comino
-description: A ten minute boat-ride to even more Hollywood scenery! 
-img: assets/img/DiveComino.jpeg
+title: Highlights from Gozo
+description: Scenery that makes Hollywood marvel
+img: assets/img/DiveGozo.jpeg
 importance: 9
 category: diving
 ---

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Highlights from Ghar Lapsi
-description: Marvellous caves and nice reefs in Malta 
-img: assets/img/DiveGharLapsi.jpeg
+title: Highlights from Valletta
+description: Wreck diving in front of Malta's capital 
+img: assets/img/DiveValletta.jpeg
 importance: 11
 category: diving
 ---

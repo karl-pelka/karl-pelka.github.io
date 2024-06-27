@@ -29,7 +29,7 @@ On other dives I managed to see batfish and angelfish
     </div>
 </div>
 <div class="caption">
- On the left, you can see some angelfish that live around the Vega and on the right you can see a batfish that we encountered around the harbour of Salvador.
+ The first picture shows some angelfish that live around the Vega and in the second picture you can see a batfish that we encountered around the harbour of Salvador.
 </div>
 
 

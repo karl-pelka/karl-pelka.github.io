@@ -27,7 +27,7 @@ Moreover, we saw a lot of gigantic lobsters, a lot of Garibaldi fish, nice sea s
     </div>
 </div>
 <div class="caption">
-    Diving through the kelp forests at the Channel Islands in 2022.
+    Diving through the kelp forests at the Channel Islands in 2024.
 </div>
 
 During my stay for the GRC in 2022, my wife joined after the conference and we went diving with the [Raptor Dive Boat](https://venturadive.com/) where we explored the kelp forests around the Channel Islands.

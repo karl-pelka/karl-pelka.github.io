@@ -1,0 +1,1 @@
+In August 2025, we celebrated my father's birthday in Ticino, Switzerland. I managed to explore the Verzasca river and Maggia river with Giovanni of Maggiore Diving. It was an amazing day and two very unique dives through crystal clear rivers. There is certainly more to discover around there and I am really looking forward to explore Lago Maggiore more.

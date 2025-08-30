@@ -1,25 +1,37 @@
 ---
 layout: page
-title: Floquet Dynamics
-description: Optomechanical systems under the influence of periodic modulation
-img: assets/img/publication_preview/FloquetLasing.gif
+title: CV Quantum Information
+description: Non-reciprocal entanglement propagation
+img: assets/img/Nonreciprocity.png
 importance: 2
 category: science
-related_publications: Pelka2022A, Mercade2021
-
+related_publications: true
 ---
 
-During my PhD I studied the backaction of optomechanical systems under periodic intensity modulation, which lead to a periodic Hamiltonian. It enables the mechanical modes to trigger the instability of another mechanical mode. In the blue detuned regime, it is possible to attain mode-locked lasing of two modes even though there is mode competition which was shown experimentally in {% cite Mercade2021 %}. The theoretical formalism shows, that the intensity modulation needs to occur at the difference frequency of the two mechanical oscillators. There is a wonderful intuition that explains the physics of this system in terms of a choir as shown in the figure below.
+The basic idea in {% cite Pelka2024 %} revolves around amorphous quantum networks---where the nodes consist of bosonic modes---which can be used in some sense to employ any quantum cryptographic scheme or quantum information processing. At some point it will be necessary to distribute quantum resources---such as entanglement---in a controllable manner in distinct nodes of the network. This is where our work comes into play.
 
-<div class="row" style="text-align: center">
+<div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/publication_preview/FloquetLasing.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Nonreciprocity.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/RETQNFig2.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Floquet Lasing.
+    Our imagination of an open system arrays decaying into common baths to establish nonreciprocity (left) and its capability to route entanglement (right) as evaluated through the logarithmic negativity
 </div>
 
-Imagine two groups singing a 4/3 polyrhythm such that the upper group sings notes at a frequency of 4 Hz whilst the other group in the lower line of the clave sings notes at a frequency of 3 Hz. A conductor would indicate the 1 of each measure at a frequency of 1 Hz which happens to be the difference frequency of the two groups.
+We imagine an array of open bosonic quantum systems, depicted in the left picture, that are arranged such that there exist two different possibilities to hop from one node to the next. These can be tuned to enable nonreciprocal hopping such that any excitation that travels down the channel cannot travel back. Through connecting this quantum channel with an external, squeezed oscillator we generate quanta that are identical in their quantum properties. We investigate the steady state where these quanta have been propagated through the channel and see that the quantifier---the logarithmic negativity which is non-zero for entangled parties---shows entanglement if the directionality permits transmission of excitations.
 
-Employing the same formalism it is also possible to have one mechanical mode trigger the instability---optomechanical bistability in this case---of the other mechanical mode which is published in {% cite Pelka2022A %}.
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/RETQNFig3.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The propagation depth through the channel as it depends on the squeezing and coupling into the channel and the amount of excitations generated in the final entangled node
+</div>
+
+Moreover we find that stronger squeezing reduces the amount of nodes that the entanglement can be propagated through the network even though it is the entanglement generating process. We link it to the amount of mean excitations that are generated in this process "heating" up the channel until it becomes unstable.
+

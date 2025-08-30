@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-03-08 11:59:00-0400
+date: 2025-08-04 11:59:00-0400
 inline: true
 related_posts: false
 ---
 
-Quantumalta at the GRC on "Mechanical systems in the Quantum Regime".
+Contract with Quantumalta extended!

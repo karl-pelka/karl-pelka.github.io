@@ -1,0 +1,1 @@
+Before the FNS 2025 Conference in Atsugi, Japan I managed to go diving in Japan with Hokulea Shonan. We went shark diving in Chiba, altitude diving at Lake Motosuko at the foot of Mount Fuji, and enjoyed Hatsushima Island. It was an amazing experience with Terushige, Foo, Sho, and Ewa. I can't wait to be diving with you guys again.

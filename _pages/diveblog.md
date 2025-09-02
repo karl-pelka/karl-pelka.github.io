@@ -10,17 +10,17 @@ profiles:
  
 
   - align: right
-    image: diveblog/BlogVerzasca.jpg
+    image: diveblog/BlogVerzasca.webp
     content: diveblog/Verzasca.md
     image_circular: false # crops the image to make it circular
     more_info: > 
   - align: left
-    image: diveblog/BlogAlaska.jpg
+    image: diveblog/BlogAlaska.JPG
     content: diveblog/Alaska.md
     image_circular: false # crops the image to make it circular
     more_info: >
   - align: right
-    image: diveblog/BlogJapan.jpg
+    image: SharkScramble.webp
     content: diveblog/Japan.md
     image_circular: false # crops the image to make it circular
     more_info: > 

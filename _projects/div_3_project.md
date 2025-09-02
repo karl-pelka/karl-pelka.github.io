@@ -2,7 +2,7 @@
 layout: page
 title: Salvador, Brasil
 description: Catching up and descending in Salvador and its history
-img: assets/img/DiveSalvador.jpg
+img: assets/img/DiveSalvador.jpeg
 importance: 3
 category: diving
 ---

@@ -2,7 +2,7 @@
 layout: page
 title: Cairns, Australia
 description: Diving the Great Barrier Reef
-img: assets/img/DiveCairns.jpeg
+img: assets/img/DiveCairns.jpg
 importance: 15
 category: diving
 ---

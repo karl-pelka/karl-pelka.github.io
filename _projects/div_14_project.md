@@ -2,7 +2,7 @@
 layout: page
 title: Whitsunday islands, Australia
 description: Crikey, mate! Airlie Beach is a beauty! 
-img: assets/img/DiveWhitsundays.jpeg
+img: assets/img/DiveWhitsundays.jpg
 importance: 14
 category: diving
 ---

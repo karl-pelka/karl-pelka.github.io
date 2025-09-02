@@ -1,22 +1,35 @@
 ---
 layout: page
-title: Whitsunday islands, Australia
-description: Crikey, mate! Airlie Beach is a beauty! 
-img: assets/img/DiveWhitsundays.jpg
+title: Highlights in Manoel Island
+description: History a few metres under the surface
+img: assets/img/DiveManoel.jpeg
 importance: 14
 category: diving
 ---
 
-During our journey along the Australian east coast in 2022, my wife and I went for some dives at Hardy Reef starting from Airlie Beach with [Reef Safari](https://www.reefsafari.com) where we saw a reef shark, pufferfish, gigantic clams and a lot of corals
+Manoel Island is a micro island located between Valletta and Sliema which are the main tourist attractions of the Maltese islands. If you look from Valletta onto Manoel Island you may find that you look onto a courtyard you know from television. It turns out that you look into the Yard of the old Hospital which was used to film the decapitation of Ned Stark in Game of Thrones.
 
-<div class="row mt-3">
+
+If you go to Manoel Island as a pedestrian you can go all the way to the hospital and find the ladder entering into the water there.
+
+<div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/DiveWhitsundays.jpg" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/DiveWhitsundays2.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/DiveManoel3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    At Hardy Reef, we met pufferfish and saw gigantic clams among many more fish and other marine life.
+ The view from the entrance at Manoel Island. On the left you see the old hospital and looking accross the bay you see Valletta.
 </div>
+
+Diving out along the side of the Hospital will make you hit the X127 starting at 6 meter depth all the way down to 22 m.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/DiveManoel.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+ Swimming around the X127 at Manoel Island, Malta.
+</div>
+
+As Manoel Island is in the bay between Sliema and Valletta it is pretty much covered from all sides from wind. This makes this site diveable nearly every day.

@@ -1,19 +1,25 @@
 ---
 layout: page
-title: Oberding, Germany
-description: Fun dive at Divers-Indoor
-img: assets/img/DiveOberding.png
+title: Eching, Germany
+description: Fun dive at Echinger Weiher
+img: assets/img/DiveEching.jpg
 importance: 1
 category: diving
 ---
 
-To not get totally rusty, I decided to take a good friend with me to practice our dive skills. We went to Divers-Indoor close to the Munich Airport in Oberding, Germany. It was a great experience with great rental equipment. There are many different sections with platforms, obstacles and mini habitats. I can definitely recommend checking out the place.
+To stay in shape I decided to join ABC-divers on their after-work dive on Friday in August 2025. I enjoyed myself and got to explore the pond whose inhabitants---alive, dead, and obducted---we all found.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/DiveOberding2.jpeg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/DiveEching2.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/DiveEching3.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+        <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/DiveEching.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Practicing our buoyancy with ring exercises
+    The inhabitants of the Echinger Weiher: The pike (German: Hecht), plastic shark, and wanted sign for Oskar the alien who was obducted.
 </div>

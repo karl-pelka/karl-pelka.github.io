@@ -12,5 +12,5 @@ children:
     permalink: /dissemination/
   - title: divider
   - title: blog
-    permalink: /science-blog/
+    permalink: /blog/
 ---

@@ -5,7 +5,7 @@ date: 2025-01-20 08:00:00
 description: quantum Zeno blockade in optomechanical systems now on ArXiv!
 tags: Zeno Optomechanics
 categories: Publications
-thumbnail: assets/img/ZenoFig1.pdf
+thumbnail: assets/img/ZenoFig1.png
 ---
 
 We have finally put our new paper on the quantum Zeno effect in optomechanical systems on the [ArXiv](https://arxiv.org/abs/2501.11602). We encourage you to go and check it out and discuss with us on the conferences we will attend this year.
@@ -14,10 +14,10 @@ The basic idea revolves around .
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/ZenoFig1.pdf" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/ZenoFig1.png" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/ZenoFig1.pdf" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/ZenoFig1.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -28,7 +28,7 @@ We imagine an arrays.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/ZenoFig1.pdf" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/ZenoFig1.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

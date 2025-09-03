@@ -30,4 +30,4 @@ Recap about the conference dinner in Hamburg.
     Me presenting our poster on routing of entanglement in quantum networks in Helgoland, Germany.
 </div>
 
-Recap on the conference in Helgoland and a link to [Physics World] (https://physicsworld.com/a/helgoland-2025-the-inside-story-of-what-happened-on-the-quantum-island/) referring to me as part of the creme de la creme of quantum physics.
+Recap on the conference in Helgoland and a link to [Physics World](https://physicsworld.com/a/helgoland-2025-the-inside-story-of-what-happened-on-the-quantum-island/) referring to me as part of the creme de la creme of quantum physics.

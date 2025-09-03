@@ -1,29 +1,35 @@
 ---
 layout: page
-title: Highlights from Gozo
-description: Scenery that makes Hollywood marvel
-img: assets/img/DiveGozo.jpg
-importance: 15
+title: Highlights in Manoel Island
+description: History a few metres under the surface
+img: assets/img/DiveManoel.jpeg
+importance: 14
 category: diving
 ---
 
-Leaving Malta for it's sister island Gozo makes you feel even more relaxed as Gozo is a very remote island. Going there and especially to Dwejra makes you realise that you are at the place where the Dothraki wedding of Daenerys Targaryen and Khal Drogo took place in Game of Thrones. Only by now the rock formation, the so-called Azure Window, collapsed by now.
+Manoel Island is a micro island located between Valletta and Sliema which are the main tourist attractions of the Maltese islands. If you look from Valletta onto Manoel Island you may find that you look onto a courtyard you know from television. It turns out that you look into the Yard of the old Hospital which was used to film the decapitation of Ned Stark in Game of Thrones.
 
-However, for divers underwater the collapsed rocks left a maze of gigantic rocks as you can see here
+
+If you go to Manoel Island as a pedestrian you can go all the way to the hospital and find the ladder entering into the water there.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/DiveGozo.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/DiveManoel3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
- Diving at the Blue Hole in Dwejra, Gozo.
+ The view from the entrance at Manoel Island. On the left you see the old hospital and looking accross the bay you see Valletta.
 </div>
 
-If you dive around here you usually see Mediterranean Tuna and many other fish as you can see here
+Diving out along the side of the Hospital will make you hit the X127 starting at 6 meter depth all the way down to 22 m.
 
-<div style="margin:0 auto; text-align:center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ieJ55NOeOto?si=Qpvanwns6dZpOdwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/DiveManoel.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+ Swimming around the X127 at Manoel Island, Malta.
 </div>
 
-Diving here genuinely feels like an underwater mountain hike with the gigantic rocks there with the sharp rock edges. It is a truly unique dive.
+As Manoel Island is in the bay between Sliema and Valletta it is pretty much covered from all sides from wind. This makes this site diveable nearly every day.

@@ -1,22 +1,30 @@
 ---
 layout: page
-title: Whitsunday islands, Australia
-description: Crikey, mate! Airlie Beach is a beauty! 
-img: assets/img/DiveWhitsundays.jpg
-importance: 20
+title: Highlights from Delimara
+description: Rugged Landscapes and unique colors in Malta 
+img: assets/img/DiveDelimara.jpeg
+importance: 19
 category: diving
 ---
 
-During our journey along the Australian east coast in 2022, my wife and I went for some dives at Hardy Reef starting from Airlie Beach with [Reef Safari](https://www.reefsafari.com) where we saw a reef shark, pufferfish, gigantic clams and a lot of corals
+If you ever get the chance to go out to Delimara you have the opportunity to see some incredible reefs after a longer walk to the water
 
-<div class="row mt-3">
+<div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/DiveWhitsundays.jpg" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/DiveWhitsundays2.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/DiveDelimara.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    At Hardy Reef, we met pufferfish and saw gigantic clams among many more fish and other marine life.
+ Unique reef with wonderful colors in Delimara, Malta.
+</div>
+
+Diving around here takes you to very rocky throughs and mazes that you can explore
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/DiveDelimara2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+ Rock structures in Delimara, Malta.
 </div>

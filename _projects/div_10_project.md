@@ -1,39 +1,42 @@
 ---
 layout: page
-title: Instructor Examination
-description: Always keep going
-img: assets/img/IDC.jpeg
-importance: 10
+title: Salvador, Brasil
+description: Catching up and descending in Salvador and its history
+img: assets/img/DiveSalvador.jpeg
+importance: 9
 category: diving
 ---
 
-In Summer 2023, I decided to move on in my dive training and become a PADI Open Water Scuba Instructor which requires to go through the Instructor Development Course. I decided to go through the program at [Diveshack](https://www.divemalta.com) where our Course Director [Lee](https://www.instagram.com/lee.smallwood.cassar) first discussed what our expectations were. After that, he went on to throw curveball after curveball for two weeks at us.
+During my visit of my former flatmate for his wedding, I took some time to go out diving around Salvador da Bahia. I have been out with multiple dive schools doing some wreck dives with Mateus of [Dive Bahia](https://www.divebahia.com.br) which I recorded. These two videos show our dive of the [Vega](https://www.naufragiosdobrasil.com.br/naufvega.htm) which we first explored and then penetrated.
+<div style="margin:0 auto; text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aBxXQPzYwss?si=anVoJ1Rwtox5B0QJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div style="margin:0 auto; text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pL6vkzUxabU?si=BR3ZA848GiG73R_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="caption">
+    Exploration and Penetration of the Vega in Salvador, Brasil.
+</div>
 
-Our IDC started with an Orientation session on what is to come and to expect before a first assessment of our knowledge with mock exams was done. We moved on to learn about the expectations for teaching presentations in all sorts of situations---confined water, open water, dry, wet, knowledge development in the classroom, from DSD, continuing education, rescue situations---and how to live up to them (READ THE SLATE). After being told how to prepare for the teaching presentations it is time to learn by doing presentations. Another important part of the program is to get an understanding and finding a way around the PADI Standards and in the resources. There are workshops on other topics such as risk management and professional aspects while further examinations are sprinkled in here or there. There is also a mandatory training for the EFR Instructor Course that goes along in a similar fashion. Every day was finished at home with additional homework preparing for the upcoming sessions.
-
-The grand finale consists of a two day Instructor Examination on which only one thing needs to be said, which is adamant for any teaching. Don't worry about the examination and have trust in your Course Director (or any teacher). Their job is to prepare you for it and they will only send you to the examination when he is confident that you can pass.
+On other dives I managed to see batfish and angelfish
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/IDC.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/DiveSalvador3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/DiveSalvador2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    A new batch of Instructors that will take out and teach people about exploring the seas.
+ The first picture shows some angelfish that live around the Vega and in the second picture you can see a batfish that we encountered around the harbour of Salvador.
 </div>
 
-After the process is finished, it is time to enjoy the achievement with the other candidates as well as with the team.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/IDCPhoto2.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/IDCPhoto3.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+I would also like to thank the guys of [Rebello Mergulho](https://www.rebellomergulho.com.br/), especially [Luis Felipe](https://www.instagram.com/luisf_diver) and [Bruno da Silva](https://www.rebellomergulho.com.br/staff) for taking me out for a lot of shore dives that you can see below. They taught me to listen out for the "Coral Song", the general rustle that you can hear which comes from fish eating coral and all the life in the reef.
+<div style="margin:0 auto; text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lryJeIzIjZc?si=CcjC6lgYFk24YJh1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="caption">
-    A happy Course Director and newly hatched Instructor in the first picture and Team Diveshack enjoying the successful examination in the second one.
+    Diving the Parke da Barra where you can listen closely to the rustle referred to by locals as the "Coral Song".
 </div>
-
-All in all, I can only encourage anyone to go through the process if you want to learn about teaching as well as yourself and how much you can progress in a short time. You will feel overwhelmed at some point and cannot imagine how everything is supposed to come together in the end. You will feel like quitting at some point because you cannot meet the expectations whilst being tired and sore. Progress is not achieving everything on your first try but rather using every opportunity to work on yourself and always keep on going no matter where you stand right now. Therefore, do it with a Course Director whom you trust because you need to have faith in your teacher to prepare you for what is to come. After all, you will have something to make use of and look back proudly.

@@ -9,24 +9,29 @@ profiles:
   # and create one content file for each profile inside _pages/
  
 
-  - align: right
+  - align: left
     image: diveblog/BlogVerzasca.webp
     content: diveblog/Verzasca.md
     image_circular: false # crops the image to make it circular
     more_info: > 
-  - align: left
+  - align: right
     image: diveblog/BlogAlaska.JPG
     content: diveblog/Alaska.md
     image_circular: false # crops the image to make it circular
     more_info: >
-  - align: right
+  - align: left
     image: SharkScramble.webp
     content: diveblog/Japan.md
     image_circular: false # crops the image to make it circular
     more_info: > 
-  - align: left
+  - align: right
     image: diveblog/BlogTec.jpg
     content: diveblog/Tec.md
+    image_circular: false # crops the image to make it circular
+    more_info: >
+  - align: left
+    image: GozoMaltaFinish.jpg
+    content: diveblog/GozoMaltaSwim.md
     image_circular: false # crops the image to make it circular
     more_info: >
   - align: right

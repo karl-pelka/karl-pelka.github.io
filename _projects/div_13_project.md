@@ -1,50 +1,34 @@
 ---
 layout: page
-title: Highlights in Zurrieq
-description: Have your mind blown
-img: assets/img/DiveZurrieq.jpeg
-importance: 13
+title: Highlights in Sliema
+description: Good times in Sliema
+img: assets/img/DiveSliema.jpeg
+importance: 12
 category: diving
 ---
 
-Going to the south of the Maltese islands you can find Zurrieq which is known for the Blue Grotto. Using your scuba gear shows you a whole different part of the site. There is a nice valley where the tourist ships leave for the Blue Grotto where you can do wonderful night dives. Leaving the valley there are nice reefs where you can find a lot of curious creatures like this octopus who approached us.
+Sliema is the touristic heart of Malta and the home of the Diveshack, where I did a lot of my training. Diving across the street of Diveshack you end up in Qui Si Sana where you can encounter a lot of different marine life.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/DiveZurrieq3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/DiveSliema.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
- A curious octopus who wanted to get his own dive computer in Zurrieq, Malta. That guy wears two of them anyways so it wouldn't hurt him, right?
+ Meeting a school of fish in Sliema, Malta
 </div>
 
-The biggest draw underwater however is the Um el Farroud ship wreck which is a 100 metre long oil tanker broken into two pieces
+I have seen flying gurnards, octopus, baby rays and many more at a shore that is reachable by bus in the touristic part of the island. I can only recommend anyone to check out the beach, with mask and snorkels or on scuba.
+
+Going on for just the next bay you end up in Exiles where you can see the Tug Two:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/DiveZurrieq.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/DiveSliema2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
- A very tempting look at the Um el Farroud's passenger deck.
+ The Tug Two in Sliema, Malta.
 </div>
 
-Seeing all of the wreck takes multiple dives and gives plenty of opportunities to train different skills and add gear to the dive equipment.
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/diveblog/DiveZurrieq2.JPG" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
- Exploring the bow of the Farroud on a DPV makes life almost too comfortable.
-</div>
-
-
-Penetrating the wreck is also possible as you can see in this short clip.
-
-<div style="margin:0 auto; text-align:center">
-<iframe width="348" height="618" src="https://www.youtube.com/embed/3WrDcmSqU9c" title="Penetration of Um el Farroud in Malta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-To sum it up, you never run out of things to see or do in Zurrieq on the surface or underwater.
+There are so many dives and things to see in a very easy going environment so go there and check it out.

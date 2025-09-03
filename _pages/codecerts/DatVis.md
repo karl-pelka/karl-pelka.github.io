@@ -1,0 +1,1 @@
+I worked through the material on [Data Visualization](https://www.freecodecamp.org/learn/data-visualization/) at [freecodecamp](https://www.freecodecamp.org) and learned how to generate interactive visuals through this course.

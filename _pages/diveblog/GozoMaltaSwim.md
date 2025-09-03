@@ -1,0 +1,1 @@
+In September 2024, I participated in the Gozo Malta Swim organised by the Birkirkara St. Joseph Sports Club. I managed to swim 6.1 km from Hondoq ir-Rummien in Gozo to the Marfa Jetty in Malta in 2:08:54 as documented [here](https://my.raceresult.com/309340/#3_5C89F2)

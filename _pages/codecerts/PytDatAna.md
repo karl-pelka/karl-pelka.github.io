@@ -1,1 +1,1 @@
-I took some time to introduce myself into [Data analysis with Python](https://freecodecamp.org/certification/Karl_Pelka/data-analysis-with-python-v7) with the course at [freecodecamp](https://www.freecodecamp.org).
+I took some time to introduce myself into [Data analysis with Python](https://freecodecamp.org/certification/Karl_Pelka/data-analysis-with-python-v7) with the course at [freecodecamp](https://www.freecodecamp.org). My github repository with codes for all projects can be found [here](https://github.com/karl-pelka/FCC_DataAnalysisWithPython).

@@ -1,1 +1,1 @@
-I took some time to introduce myself into HTML and CSS with the course on [Responsive Web Design](https://freecodecamp.org/certification/Karl_Pelka/responsive-web-design) at [freecodecamp](https://www.freecodecamp.org).
+I took some time to introduce myself into HTML and CSS with the course on [Responsive Web Design](https://freecodecamp.org/certification/Karl_Pelka/responsive-web-design) at [freecodecamp](https://www.freecodecamp.org). My github repository with codes for all projects can be found [here](https://github.com/karl-pelka/FCC_ResponsiveWebDevelopment).

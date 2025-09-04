@@ -9,6 +9,12 @@ nav_order:
 profiles:
   # if you want to include more than one profile, just replicate the following block
   # and create one content file for each profile inside _pages/
+  
+  - align: left
+    image: divecerts/RAID_Deco50.png
+    content: divecerts/RaidDeco50.md
+    image_circular: false # crops the image to make it circular
+    more_info: > 
   - align: right
     image: divecerts/PADI_OWSI.jpg
     content: divecerts/OWSI.md

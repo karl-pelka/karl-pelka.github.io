@@ -25,7 +25,7 @@ For now, my postdoctoral journey brought me back to the University of Malta to w
 I read for my PhD at the University of Malta working on cooperative effects in nano- and optomechanics and studied for my BSc and MSc in Physics at the Friedrich-Alexander-Universität (Erlangen, Germany) specialising in quantum optics, quantum information and statistical optics both theoretically and experimentally. 
 
 
-Moreover, I am a PADI Open Water Scuba Instructor with more than 250 dives and technical diver certified to 50 m with experience on five continents; a hobbyist programmer; and a happy husband and father.
+Moreover, I am a PADI Open Water Scuba Instructor with more than 250 dives and technical diver certified to 50 m with dive experience on five continents; a hobbyist programmer; and a happy husband and father.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

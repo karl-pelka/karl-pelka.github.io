@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quantumalta at 100 years of quantum mechanics 2025 in Helgoland, Germany
+title: Quantumalta at 100 years of quantum mechanics 2025 in Helgoland, Germany.
 date: 2025-06-12 11:01:00
 description: Poster on nonreciprocal entanglement routing
 tags: Helgoland MaxPlanckSociety

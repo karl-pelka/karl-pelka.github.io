@@ -7,16 +7,17 @@ nav_order:
 profiles:
   # if you want to include more than one profile, just replicate the following block
   # and create one content file for each profile inside _pages/
- 
+
   - align: left
-    image: codeblog/empty.png
+    image: codeblog/AImusic.webp
+    content: codeblog/AIProj.md
+    image_circular: false # crops the image to make it circular
+    more_info: > 
+  - align: right
+    image: codecerts/PytML.png
     content: codeblog/PytMacLea.md
     image_circular: false # crops the image to make it circular
     more_info: >
-  - align: right
-    image: codeblog/empty.png
-    content: codeblog/AIProj.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
+
     
 ---

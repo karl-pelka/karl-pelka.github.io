@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-09-09 11:00:00-0400
+date: 2025-10-09 07:59:00-0400
 inline: true
 related_posts: false
 ---
 
-Quantum Zeno blockade in optomechanical systems [accepted in PR Research](https://journals.aps.org/prresearch/accepted/10.1103/vhnq-79bj).
+Testrun for my fully automated "AI music news" successful.

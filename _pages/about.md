@@ -25,7 +25,9 @@ For now, my postdoctoral journey brought me back to the University of Malta to w
 I read for my PhD at the University of Malta working on cooperative effects in nano- and optomechanics and studied for my BSc and MSc in Physics at the Friedrich-Alexander-Universität (Erlangen, Germany) specialising in quantum optics, quantum information and statistical optics both theoretically and experimentally. 
 
 
-Moreover, I am a PADI Open Water Scuba Instructor with more than 250 dives and technical diver certified to 50 m with dive experience on five continents; a hobbyist programmer; and a happy husband and father.
+
+Moreover, I am a PADI Open Water Scuba Instructor with more than 250 dives and technical diver certified to 50 m with dive experience on five continents
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -57,4 +59,16 @@ Moreover, I am a PADI Open Water Scuba Instructor with more than 250 dives and t
 </div>
 <div class="caption">
     Exploring the Um-El Farroud Wreck with a DPV in Zurrieq, Malta; Finding Nemo on the Great Barrier Reef, Australia; Diving the Channel Islands in California; Shark encounter in Chiba, Japan; Diving in Salvador, Brasil (from left to right).
+</div>
+
+
+When I find some time, I am a hobbyist programmer trying to find solutions to (generally non-existing) problems. My latest idea is to become a fully AI generated news "musician". The result can be seen below and should be the successful output of a code that automatically takes some daily news; generates a song; generates a thumbnail picture; generates the video; and uploads it to YouTube for the world to see. Whether you consider it advanced spam generation or inspiring is up to you, I do not review the content of the songs. I belong to the former group and believe that AI music is horrible but I am willing to let my own creation prove me wrong.
+
+<div style="text-align: center">
+<iframe
+  src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UUkaH3bF_jalv2ioSh2hQ6mg"
+  width="600"
+  height="340"
+  allowfullscreen>
+</iframe>
 </div>

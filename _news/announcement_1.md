@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-08-04 11:59:00-0400
+date: 2025-10-02 11:00:00-0400
 inline: true
 related_posts: false
 ---
 
-Contract with Quantumalta extended!
+Quantum Zeno blockade in optomechanical systems [published in PR Research](https://journals.aps.org/prresearch/abstract/10.1103/vhnq-79bj).

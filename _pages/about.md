@@ -22,13 +22,13 @@ I am a quantum physicist interested in quantum optomechanics, quantum informatio
 
 I am hired by NTT's Basic Research Laboratory as a Senior Research and Development Scientist which is going to bring me to Japan this year. I am looking forward to expand on my research directions as well as collaborating with the local [Nanomechanics Research Group](https://www.rd.ntt/e/brl/group_introduction/group_014.html).
 
-My postdoctoral journey then brought me back to the University of Malta to work within the MQSENS project on the dynamics of bosonic modes forced into subspaces through repeated measurements, the so-called quantum Zeno dynamics, and on entanglement propagation in non-reciprocal bosonic arrays among other activities in the Department of Physics.
+My postdoctoral journey started off by going back to the University of Malta to work within the MQSENS project on the dynamics of bosonic modes forced into subspaces through repeated measurements, the so-called quantum Zeno dynamics, and on entanglement propagation in non-reciprocal bosonic arrays among other activities in the Department of Physics.
 
 I read for my PhD at the University of Malta working on cooperative effects in nano- and optomechanics and studied for my BSc and MSc in Physics at the Friedrich-Alexander-Universität (Erlangen, Germany) specialising in quantum optics, quantum information and statistical optics both theoretically and experimentally. 
 
 
 
-Moreover, I am a PADI Open Water Scuba Instructor with more than 250 dives and technical diver certified to 50 m with dive experience on five continents
+Moreover, I am a PADI Open Water Scuba Instructor with more than 250 dives and technical diver certified to 50 m with dive experience on five continents.
 
 
 <div class="row">

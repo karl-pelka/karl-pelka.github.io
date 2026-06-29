@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoc @ <a href='https://quantum.edu.mt'>Quantumalta</a>.
+subtitle: Senior Research and Development Scientist @ <a href='https://www.rd.ntt/brl/group_introduction/ryouron-g/'>NTT Basic Research Laboratory</a>.
 
 profile:
   align: right
@@ -20,7 +20,9 @@ social: true # includes social icons at the bottom of the page
 
 I am a quantum physicist interested in quantum optomechanics, quantum information, statistical optics, and non-linear dynamics with experience both in theory and experiment and a passionate science communicator.
 
-For now, my postdoctoral journey brought me back to the University of Malta to work within the MQSENS project on the dynamics of bosonic modes forced into subspaces through repeated measurements, the so-called quantum Zeno dynamics, and on entanglement propagation in non-reciprocal bosonic arrays among other activities in the Department of Physics.
+I am hired by NTT's Basic Research Laboratory as a Senior Research and Development Scientist which is going to bring me to Japan this year. I am looking forward to expand on my research directions as well as collaborating with the local [Nanomechanics Research Group](https://www.rd.ntt/e/brl/group_introduction/group_014.html).
+
+My postdoctoral journey then brought me back to the University of Malta to work within the MQSENS project on the dynamics of bosonic modes forced into subspaces through repeated measurements, the so-called quantum Zeno dynamics, and on entanglement propagation in non-reciprocal bosonic arrays among other activities in the Department of Physics.
 
 I read for my PhD at the University of Malta working on cooperative effects in nano- and optomechanics and studied for my BSc and MSc in Physics at the Friedrich-Alexander-Universität (Erlangen, Germany) specialising in quantum optics, quantum information and statistical optics both theoretically and experimentally. 
 

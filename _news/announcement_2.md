@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-10-09 07:59:00-0400
+date: 2026-06-26 11:59:00-0400
 inline: true
 related_posts: false
 ---
 
-Testrun for my fully automated "AI music news" successful.
+Contract signed with [NTT Basic Research Laboratory](https://www.rd.ntt/brl/group_introduction/ryouron-g/research.html).

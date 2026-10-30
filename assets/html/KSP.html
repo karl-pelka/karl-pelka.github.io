@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TCWC726HHB"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TCWC726HHB');
+  </script>
+  <!-- Google tag end (gtag.js) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive Kuramoto model playground to explore synchronization on complex networks with real-time visualizations and parameter controls.">
+  <meta name="author" content="Guram Mikaberidze">
+  <link rel="canonical" href="https://mikaberidze.github.io/kuramoto/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Guram Mikaberidze">
+  <meta property="og:title" content="Kuramoto Playground – Network Synchronization Explorer">
+  <meta property="og:description" content="Experiment with the Kuramoto model on complex networks using interactive visualizations and controls.">
+  <meta property="og:url" content="https://mikaberidze.github.io/kuramoto/">
+  <meta property="og:image" content="https://mikaberidze.github.io/kuramoto/favicon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kuramoto-Sakaguchi Playground">
+  <meta name="twitter:description" content="Interactive Kuramoto model playground with real-time visualizations.">
+  <meta name="twitter:image" content="https://mikaberidze.github.io/kuramoto/favicon.png">
+  <title>Kuramoto Sakaguchi Explorer</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Kuramoto Playground",
+    "url": "https://mikaberidze.github.io/kuramoto/",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "description": "Interactive Kuramoto model playground for exploring phase synchronization on complex networks.",
+    "author": {
+      "@type": "Person",
+      "name": "Guram Mikaberidze",
+      "url": "https://mikaberidze.github.io/"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #050c1d;
+      --panel: #0d1a33;
+      --panel-2: #0b1427;
+      --accent: #5af2c1;
+      --accent-2: #ffb347;
+      --muted: #9fb2ff;
+      --grid: rgba(255, 255, 255, 0.06);
+      --text: #e8ecff;
+      --shadow: 0 15px 55px rgba(0, 0, 0, 0.35);
+      --radius: 14px;
+      --font: "Avenir Next", "Futura", "Trebuchet MS", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background: radial-gradient(circle at 20% 20%, rgba(90, 242, 193, 0.08), transparent 30%),
+                  radial-gradient(circle at 80% 10%, rgba(255, 107, 107, 0.08), transparent 28%),
+                  linear-gradient(135deg, #050c1d 0%, #071024 40%, #060c1f 100%);
+      font-family: var(--font);
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    .page {
+      padding: 12px 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 1400px;
+      min-height: 100vh;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 4px;
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      letter-spacing: 0.02em;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: minmax(260px, 320px) 1fr;
+      gap: 14px;
+      min-height: 0;
+      flex: 1;
+    }
+
+    .panel {
+      background: linear-gradient(145deg, rgba(13, 26, 51, 0.95), rgba(7, 17, 33, 0.95));
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(90, 242, 193, 0.08), rgba(255, 107, 107, 0.08));
+      opacity: 0.4;
+      filter: blur(40px);
+      z-index: 0;
+    }
+
+    .panel > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .control {
+      background: var(--panel-2);
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .control-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.01em;
+      margin-bottom: 6px;
+    }
+
+    .control-value {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13px;
+      min-width: 48px;
+      text-align: right;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, rgba(90, 242, 193, 0.7), rgba(159, 178, 255, 0.7));
+      border-radius: 10px;
+      outline: none;
+      margin: 6px 0 2px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--text);
+      border: 2px solid var(--accent);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--text);
+      border: 2px solid var(--accent);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
+    button {
+      background: linear-gradient(135deg, rgba(90, 242, 193, 0.8), rgba(159, 178, 255, 0.7));
+      color: #041024;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    button.secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.3);
+    }
+
+    .playback-controls {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .playback-btn {
+      padding: 8px 6px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      box-shadow: none;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .playback-btn svg {
+      width: 22px;
+      height: 16px;
+    }
+
+    .playback-btn.active {
+      border-color: var(--accent);
+      box-shadow: 0 10px 24px rgba(90, 242, 193, 0.25);
+      background: rgba(90, 242, 193, 0.12);
+      color: var(--accent);
+    }
+
+    .playback-meta {
+      margin-top: 4px;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 12px;
+      color: var(--muted);
+      gap: 6px;
+    }
+
+    .playback-meta strong {
+      color: inherit;
+      font-size: 12px;
+    }
+
+    .visuals {
+      display: grid;
+      grid-template-rows: repeat(2, minmax(260px, auto));
+      gap: 10px;
+      min-height: 0;
+    }
+
+    .visual-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      min-height: 0;
+    }
+
+    .card {
+      background: rgba(10, 20, 38, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+      min-height: 260px;
+      box-shadow: var(--shadow);
+    }
+
+    .colorbar {
+      position: absolute;
+      top: 50%;
+      left: 32px;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 140px;
+      border-radius: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: visible;
+      z-index: 3;
+    }
+
+    .colorbar-caption {
+      position: absolute;
+      right: 100%;
+      margin-right: 15px;
+      top: 50%;
+      transform: translate(50%, -50%);
+      color: var(--muted);
+      font-size: calc(11px * 1.4);
+      white-space: nowrap;
+    }
+
+    .colorbar-caption-inner {
+      display: inline-block;
+      transform-origin: 50% 50%;
+      transform: rotate(-90deg);
+    }
+
+    .colorbar.hue-bar {
+      background: linear-gradient(180deg,
+        hsl(0, 80%, 65%),
+        hsl(60, 80%, 65%),
+        hsl(120, 80%, 65%),
+        hsl(180, 80%, 65%),
+        hsl(240, 80%, 65%),
+        hsl(300, 80%, 65%),
+        hsl(360, 80%, 65%));
+    }
+
+    .colorbar.freq-bar {
+      background: linear-gradient(180deg,
+        hsl(0, 85%, 65%),
+        hsl(220, 95%, 55%));
+    }
+
+    .colorbar .tick {
+      position: absolute;
+      left: 100%;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--muted);
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .colorbar .tick::before {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 2px;
+      margin-left: -11px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .colorbar .tick.min { bottom: 0; transform: translateY(50%); }
+    .colorbar .tick.mid { top: 50%; transform: translateY(-50%); }
+    .colorbar .tick.max { top: 0; transform: translateY(-50%); }
+
+    .canvas-frame {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+    }
+
+    .card.has-colorbar .canvas-frame {
+      left: 70px;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .card h3 {
+      position: absolute;
+      left: 16px;
+      top: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--muted);
+      z-index: 2;
+    }
+
+    .legend {
+      position: absolute;
+      right: 16px;
+      top: 12px;
+      display: flex;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      z-index: 2;
+      align-items: center;
+    }
+
+    .phase-caption {
+      position: absolute;
+      left: 16px;
+      top: 12px;
+      z-index: 3;
+      font-size: 12px;
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .status {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .status strong {
+      color: var(--accent);
+      font-size: 18px;
+    }
+
+    .note {
+      font-size: 12px;
+      color: rgba(232, 236, 255, 0.75);
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    .header-note {
+      margin-left: auto;
+      max-width: 260px;
+      text-align: right;
+    }
+
+    .author-note {
+      margin-top: auto;
+      padding-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .author-note a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .author-note a:hover {
+      text-decoration: underline;
+    }
+
+    .equation-inline {
+      font-size: 0.75em;
+      font-weight: 600;
+      color: var(--text);
+      margin-left: 12px;
+      display: inline-block;
+    }
+
+    .equation-inline-secondary {
+      margin-left: 40px;
+    }
+
+    .title-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    @media (max-width: 960px) {
+      body {
+        overflow: auto;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .shell {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .visuals {
+        min-height: 600px;
+      }
+      .visual-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+  <body>
+  <div class="page">
+    <header>
+      <div class="title-block">
+        <h1>Kuramoto model:<span class="equation-inline">\( \dfrac{d\theta_i}{dt} = \omega_i + K \sum_{j} A_{ij}\,\sin(\theta_j - \theta_i+\alpha) \)</span><span class="equation-inline equation-inline-secondary">\( r = \dfrac{1}{N}\left|\sum_j e^{i \theta_j}\right| \)</span></h1>
+      </div>
+    </header>
+
+    <div class="shell">
+      <div class="panel">
+        <div class="controls">
+          <div class="control">
+            <div class="control-header">
+              <span>\( N \) - network size</span>
+              <span class="control-value" id="sizeValue"></span>
+            </div>
+            <input id="size" type="range" min="1" max="100" step="1" value="10">
+          </div>
+          <div class="control">
+            <div class="control-header">
+              <span>\( \alpha \) - phase lag</span>
+              <span class="control-value" id="densityValue"></span>
+            </div>
+            <input id="density" type="range" min="0" max="6.28" step="0.01" value="0.05">
+          </div>
+          <div class="control">
+            <div class="control-header">
+              <span>\( \langle \omega \rangle \) - mean frequency</span>
+              <span class="control-value" id="meanValue"></span>
+            </div>
+            <input id="mean" type="range" min="-2" max="2" step="0.01" value="0.5">
+          </div>
+          <div class="control">
+            <div class="control-header">
+              <span>\( \sigma_{\omega} \) - frequency std. deviation</span>
+              <span class="control-value" id="stdValue"></span>
+            </div>
+            <input id="std" type="range" min="0" max="2" step="0.01" value="1">
+          </div>
+          <div class="control">
+            <div class="control-header">
+              <span>\( K \) - coupling strength</span>
+              <span class="control-value" id="couplingValue"></span>
+            </div>
+            <input id="coupling" type="range" min="0" max="10" step="0.1" value="0.5">
+            <div class="playback-controls" aria-label="Coupling playback controls">
+              <button type="button" class="playback-btn" data-mode="decelerate" aria-label="Decelerate">
+                <svg viewBox="0 0 20 14" aria-hidden="true" focusable="false">
+                  <path d="M19 1 9 7l10 6V1Z"></path>
+                  <path d="M11 1 1 7l10 6V1Z"></path>
+                </svg>
+              </button>
+              <button type="button" class="playback-btn" data-mode="backward" aria-label="Play backward">
+                <svg viewBox="0 0 20 14" aria-hidden="true" focusable="false">
+                  <path d="M17 1 7 7l10 6V1Z"></path>
+                </svg>
+              </button>
+              <button type="button" class="playback-btn" data-mode="pause" aria-label="Pause">
+                <svg viewBox="0 0 20 14" aria-hidden="true" focusable="false">
+                  <rect x="4" y="2" width="4" height="10" rx="1"></rect>
+                  <rect x="12" y="2" width="4" height="10" rx="1"></rect>
+                </svg>
+              </button>
+              <button type="button" class="playback-btn" data-mode="forward" aria-label="Play forward">
+                <svg viewBox="0 0 20 14" aria-hidden="true" focusable="false">
+                  <path d="M3 1v12l10-6L3 1Z"></path>
+                </svg>
+              </button>
+              <button type="button" class="playback-btn" data-mode="accelerate" aria-label="Accelerate">
+                <svg viewBox="0 0 20 14" aria-hidden="true" focusable="false">
+                  <path d="M1 1v12l10-6L1 1Z"></path>
+                  <path d="M9 1v12l10-6L9 1Z"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="playback-meta" aria-live="polite">
+              <span>Speed</span>
+              <strong id="speedMultiplier">x0</strong>
+            </div>
+          </div>
+          <div class="buttons">
+            <button id="rebuild">Regenerate network</button>
+            <button id="resetPhases" class="secondary">Reset phases</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="visuals">
+        <div class="visual-row">
+          <div class="card has-colorbar">
+            <h3>Network</h3>
+	            <div class="colorbar hue-bar">
+	              <div class="colorbar-caption">
+                  <span class="colorbar-caption-inner">\(\theta\) - node phases</span>
+                </div>
+	              <div class="tick max"><span>\(+\pi\)</span></div>
+	              <div class="tick mid"><span>0</span></div>
+	              <div class="tick min"><span>\(-\pi\)</span></div>
+	            </div>
+            <div class="canvas-frame">
+              <canvas id="springCanvas"></canvas>
+            </div>
+          </div>
+          <div class="card has-colorbar">
+            <h3>Phase circle</h3>
+            <div class="legend"><span class="dot" style="background: var(--accent);"></span><span>Order parameter</span></div>
+            <div class="colorbar freq-bar">
+              <div class="colorbar-caption">
+                <span class="colorbar-caption-inner">\(\omega\) - node frequencies</span>
+              </div>
+              <div class="tick max"><span>\(\langle \omega \rangle + 2\sigma_{\omega}\)</span></div>
+              <div class="tick mid"><span>\(\langle \omega \rangle\)</span></div>
+              <div class="tick min"><span>\(\langle \omega \rangle - 2\sigma_{\omega}\)</span></div>
+            </div>
+            <div class="canvas-frame">
+              <canvas id="circleCanvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <button id="clearHistory" class="secondary" style="position:absolute; top:12px; right:16px; z-index:2; font-size:11px; padding:6px 10px;">Clear points</button>
+          <div class="canvas-frame">
+            <canvas id="phaseCanvas"></canvas>
+          </div>
+          <div class="phase-caption">
+            <span id="kcCaptionLatex">\( \alpha_c = \pi/2  \)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    const sizeInput = document.getElementById('size');
+    const densityInput = document.getElementById('density');
+    const meanInput = document.getElementById('mean');
+    const stdInput = document.getElementById('std');
+    const couplingInput = document.getElementById('coupling');
+    const sizeValue = document.getElementById('sizeValue');
+    const densityValue = document.getElementById('densityValue');
+    const meanValue = document.getElementById('meanValue');
+    const stdValue = document.getElementById('stdValue');
+    const couplingValue = document.getElementById('couplingValue');
+    const springCanvas = document.getElementById('springCanvas');
+    const circleCanvas = document.getElementById('circleCanvas');
+    const phaseCanvas = document.getElementById('phaseCanvas');
+    const kcCaption = document.getElementById('kcCaptionLatex');
+    const rebuildBtn = document.getElementById('rebuild');
+    const resetBtn = document.getElementById('resetPhases');
+    const clearHistoryBtn = document.getElementById('clearHistory');
+    const playbackButtons = Array.from(document.querySelectorAll('.playback-btn'));
+    const speedMultiplier = document.getElementById('speedMultiplier');
+    const rootStyles = getComputedStyle(document.documentElement);
+    const springBgColor = rootStyles.getPropertyValue('--panel') || rootStyles.getPropertyValue('--bg') || '#050c1d';
+    const orderColor = rootStyles.getPropertyValue('--accent').trim() || '#5af2c1';
+
+    const maxNetworkSize = parseInt(sizeInput.max, 10) || parseInt(sizeInput.value, 10) || 500;
+    const initialN = Math.min(parseInt(sizeInput.value, 10), maxNetworkSize);
+    const geometry = {
+      maxN: maxNetworkSize,
+      positionSeed: 131071,
+      edgeSeed: 196613,
+      basePositions: { x: new Float32Array(maxNetworkSize), y: new Float32Array(maxNetworkSize) },
+      totalEdges: (maxNetworkSize * (maxNetworkSize - 1)) / 2,
+      hasPositions: false
+    };
+
+    const state = {
+      n: initialN,
+      density: parseFloat(densityInput.value),
+      mean: parseFloat(meanInput.value),
+      std: parseFloat(stdInput.value),
+      coupling: parseFloat(couplingInput.value),
+      adjacency: [],
+      degrees: [],
+      phases: new Float64Array(initialN),
+      freqs: new Float64Array(initialN),
+      baseNormals: new Float64Array(initialN),
+      circleRadiusJitter: new Float32Array(initialN),
+      layout: { x: [], y: [] },
+      order: { r: 0, psi: 0 },
+      criticalK: 0,
+      history: [],
+      lastLog: 0,
+      edgeCount: 0
+    };
+
+    let derivatives = new Float64Array(state.n);
+    let needsLayout = true;
+    let resizeRequested = true;
+    let rebuildTimer = null;
+    let lastTime = performance.now();
+    const playback = { speed: 0, step: 0.00064, max: 0.5 };
+
+    function updateLabels() {
+      sizeValue.textContent = state.n;
+      densityValue.textContent = state.density.toFixed(2);
+      meanValue.textContent = state.mean.toFixed(2);
+      stdValue.textContent = state.std.toFixed(2);
+      couplingValue.textContent = state.coupling.toFixed(2);
+    }
+
+    function updatePlaybackUI() {
+      const speed = playback.speed;
+      const activeMode = speed === 0 ? 'pause' : speed > 0 ? 'forward' : 'backward';
+      playbackButtons.forEach(btn => {
+        const mode = btn.dataset.mode;
+        const isActive = mode === activeMode;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+      const multiplier = Math.round(speed / playback.step);
+      speedMultiplier.textContent = `${multiplier}`;
+    }
+
+    function setPlaybackSpeed(value) {
+      const snapped = Math.round(value / playback.step) * playback.step;
+      const clamped = Math.max(-playback.max, Math.min(playback.max, snapped));
+      playback.speed = Math.abs(clamped) < playback.step * 0.5 ? 0 : clamped;
+      updatePlaybackUI();
+    }
+
+    function accelerateSpeed() {
+      const currentMultiplier = Math.round(playback.speed / playback.step);
+      const maxMultiplier = Math.round(playback.max / playback.step);
+      const nextMultiplier = Math.min(maxMultiplier, currentMultiplier + 1);
+      setPlaybackSpeed(nextMultiplier * playback.step);
+    }
+
+    function decelerateSpeed() {
+      const currentMultiplier = Math.round(playback.speed / playback.step);
+      const minMultiplier = -Math.round(playback.max / playback.step);
+      const nextMultiplier = Math.max(minMultiplier, currentMultiplier - 1);
+      setPlaybackSpeed(nextMultiplier * playback.step);
+    }
+
+    function advanceCoupling(dt) {
+      const speed = playback.speed;
+      if (speed === 0) return;
+      const baseIncrement = playback.step;
+      const speedMultiplier = Math.round(speed / baseIncrement);
+      if (speedMultiplier === 0) return;
+      const actualSpeed =
+        Math.sign(speedMultiplier) *
+        baseIncrement *
+        Math.pow(1.5, Math.abs(speedMultiplier));
+      const min = parseFloat(couplingInput.min) || 0;
+      const max = parseFloat(couplingInput.max) || 1;
+      const current = state.coupling;
+      const next = current + actualSpeed * dt;
+      const bounded = Math.min(max, Math.max(min, next));
+
+      if (Math.abs(bounded - current) < 1e-9) {
+        setPlaybackSpeed(0);
+        return;
+      }
+
+      state.coupling = bounded;
+      couplingInput.value = bounded;
+      couplingValue.textContent = bounded.toFixed(2);
+
+      if (bounded <= min + 1e-9 || bounded >= max - 1e-9) {
+        setPlaybackSpeed(0);
+      }
+    }
+
+    function randNormal(mean = 0, std = 1) {
+      const u = Math.random() || 1e-6;
+      const v = Math.random() || 1e-6;
+      const z = Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+      return mean + std * z;
+    }
+
+    function createSeededRng(seed) {
+      let s = seed >>> 0;
+      return () => {
+        s += 0x6D2B79F5;
+        let t = s;
+        t = Math.imul(t ^ (t >>> 15), t | 1);
+        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+      };
+    }
+
+    function makeSeed() {
+      return (Math.random() * 0xffffffff) >>> 0 || 1;
+    }
+
+    function generateBasePositions() {
+      const rng = createSeededRng(geometry.positionSeed);
+      const px = geometry.basePositions.x;
+      const py = geometry.basePositions.y;
+      for (let i = 0; i < geometry.maxN; i++) {
+        const r = Math.sqrt(rng());
+        const theta = 2 * Math.PI * rng();
+        px[i] = r * Math.cos(theta);
+        py[i] = r * Math.sin(theta);
+      }
+      geometry.hasPositions = true;
+    }
+
+    function edgeOrderValue(i, j) {
+      const a = i + 1;
+      const b = j + 1;
+      let h = geometry.edgeSeed ^ Math.imul(a, 374761393) ^ Math.imul(b, 668265263);
+      h = Math.imul(h ^ (h >>> 13), 1274126177);
+      h = (h ^ (h >>> 16)) >>> 0;
+      return h / 4294967295;
+    }
+
+    function buildOrderedAdjacency(n, density) {
+      const adj = Array.from({ length: n }, () => []);
+      const cutoff = Math.min(1, Math.max(0, 1));
+      let edgesIncluded = 0;
+      for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+          const order = edgeOrderValue(i, j);
+          if (order <= cutoff) {
+            adj[i].push(j);
+            adj[j].push(i);
+            edgesIncluded++;
+          }
+        }
+      }
+      return { adj, edgesIncluded };
+    }
+
+    function updateCriticalCaption() {
+      if (!kcCaption) return;
+      const kc = state.criticalK;
+      const tex = `\\( \\alpha_c = \\pi/2 \\)`;
+      kcCaption.innerHTML = tex;
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([kcCaption]).catch(() => {});
+      }
+    }
+
+    function computeCriticalK() {
+      const sigma = Math.max(1e-3, state.std);
+      state.criticalK = Math.PI/2;
+      updateCriticalCaption();
+    }
+
+    function resetPhases() {
+      for (let i = 0; i < state.phases.length; i++) {
+        state.phases[i] = Math.random() * Math.PI * 2;
+      }
+    }
+
+    function initBaseNormals() {
+      const n = state.n;
+      state.baseNormals = new Float64Array(n);
+      for (let i = 0; i < n; i++) {
+        state.baseNormals[i] = randNormal(0, 1);
+      }
+    }
+
+    function resetFreqs() {
+      const n = state.freqs.length;
+      if (!state.baseNormals || state.baseNormals.length !== n) {
+        initBaseNormals();
+      }
+      const mean = state.mean;
+      const std = state.std;
+      for (let i = 0; i < n; i++) {
+        state.freqs[i] = mean + std * state.baseNormals[i];
+      }
+    }
+
+    const delta_r = 0.1;
+
+    const freqColorStops = {
+      low: { r: 31, g: 104, b: 249 },
+      high: { r: 242, g: 90, b: 90 }
+    };
+
+    function freqColor(freq, minFreq, maxFreq, alpha = 1) {
+      const spanFreq = maxFreq - minFreq;
+      const t = spanFreq > 0 ? Math.min(1, Math.max(0, (freq - minFreq) / spanFreq)) : 0.5;
+      const r = freqColorStops.low.r + (freqColorStops.high.r - freqColorStops.low.r) * t;
+      const g = freqColorStops.low.g + (freqColorStops.high.g - freqColorStops.low.g) * t;
+      const b = freqColorStops.low.b + (freqColorStops.high.b - freqColorStops.low.b) * t;
+      return `rgba(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)}, ${alpha})`;
+    }
+
+    function rebuildSystem({ reseedGeometry = false } = {}) {
+      state.n = Math.min(Math.max(1, state.n), geometry.maxN);
+      if (reseedGeometry || !geometry.hasPositions) {
+        if (reseedGeometry) {
+          geometry.positionSeed = makeSeed();
+          geometry.edgeSeed = makeSeed();
+        }
+        generateBasePositions();
+      }
+
+      const n = state.n;
+      state.phases = new Float64Array(n);
+      state.freqs = new Float64Array(n);
+      initBaseNormals();
+      state.circleRadiusJitter = new Float32Array(n);
+      for (let i = 0; i < n; i++) {
+        state.circleRadiusJitter[i] = (Math.random() * 2 - 1) * delta_r;
+      }
+      derivatives = new Float64Array(n);
+
+      const { adj, edgesIncluded } = buildOrderedAdjacency(n, state.density);
+      state.adjacency = adj;
+      state.edgeCount = edgesIncluded;
+      state.degrees = adj.map(list => Math.max(1, list.length));
+      state.layout.x = new Float32Array(n);
+      state.layout.y = new Float32Array(n);
+      resetPhases();
+      resetFreqs();
+      state.history = [];
+      state.lastLog = performance.now();
+      computeCriticalK();
+      needsLayout = true;
+    }
+
+    function rebuildStructurePreservingState() {
+      const targetN = Math.min(Math.max(1, state.n), geometry.maxN);
+      const oldN = state.phases.length || 0;
+
+      if (targetN !== oldN) {
+        const oldPhases = state.phases;
+        const oldFreqs = state.freqs;
+        const oldBaseNormals = state.baseNormals;
+        const oldJitter = state.circleRadiusJitter;
+        const oldDerivatives = derivatives;
+
+        const newPhases = new Float64Array(targetN);
+        const newFreqs = new Float64Array(targetN);
+        const newBaseNormals = new Float64Array(targetN);
+        const newJitter = new Float32Array(targetN);
+        const newDerivatives = new Float64Array(targetN);
+
+        const copyN = Math.min(oldN, targetN);
+
+        for (let i = 0; i < copyN; i++) {
+          newPhases[i] = oldPhases[i];
+          newFreqs[i] = oldFreqs[i];
+          newBaseNormals[i] = oldBaseNormals ? oldBaseNormals[i] : randNormal(0, 1);
+          newJitter[i] = oldJitter ? oldJitter[i] : (Math.random() * 2 - 1) * delta_r;
+          newDerivatives[i] = oldDerivatives ? oldDerivatives[i] : 0;
+        }
+
+        for (let i = copyN; i < targetN; i++) {
+          newPhases[i] = Math.random() * Math.PI * 2;
+          const z = randNormal(0, 1);
+          newBaseNormals[i] = z;
+          newFreqs[i] = state.mean + state.std * z;
+          newJitter[i] = (Math.random() * 2 - 1) * delta_r;
+          newDerivatives[i] = 0;
+        }
+
+        state.phases = newPhases;
+        state.freqs = newFreqs;
+        state.baseNormals = newBaseNormals;
+        state.circleRadiusJitter = newJitter;
+        derivatives = newDerivatives;
+        state.n = targetN;
+      }
+
+      const n = state.phases.length;
+      const { adj, edgesIncluded } = buildOrderedAdjacency(n, state.density);
+      state.adjacency = adj;
+      state.edgeCount = edgesIncluded;
+      state.degrees = adj.map(list => Math.max(1, list.length));
+      state.layout.x = new Float32Array(n);
+      state.layout.y = new Float32Array(n);
+      needsLayout = true;
+    }
+
+    function scheduleRebuild() {
+      clearTimeout(rebuildTimer);
+      rebuildTimer = setTimeout(() => rebuildStructurePreservingState(), 140);
+    }
+
+    function applyInputs() {
+      const requestedN = parseInt(sizeInput.value, 10);
+      state.n = Math.min(Math.max(1, requestedN || 1), geometry.maxN);
+      state.density = parseFloat(densityInput.value);
+      state.mean = parseFloat(meanInput.value);
+      state.std = parseFloat(stdInput.value);
+      state.coupling = parseFloat(couplingInput.value);
+      computeCriticalK();
+      updateLabels();
+    }
+
+    function resizeCanvases() {
+      [springCanvas, circleCanvas, phaseCanvas].forEach(canvas => {
+        const ratio = window.devicePixelRatio || 1;
+        const { width, height } = canvas.getBoundingClientRect();
+        canvas.width = Math.max(1, Math.floor(width * ratio));
+        canvas.height = Math.max(1, Math.floor(height * ratio));
+        const ctx = canvas.getContext('2d');
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      });
+      resizeRequested = false;
+      needsLayout = true;
+    }
+
+    function computeLayout() {
+      const n = Math.min(state.n, geometry.maxN);
+      if (!n) return;
+      const width = springCanvas.getBoundingClientRect().width;
+      const height = springCanvas.getBoundingClientRect().height;
+      if (!width || !height) return;
+      if (!geometry.hasPositions) generateBasePositions();
+
+      const px = new Float32Array(n);
+      const py = new Float32Array(n);
+      const margin = 10;
+      const innerW = Math.max(1, width - 2 * margin);
+      const innerH = Math.max(1, height - 2 * margin);
+
+      const cx = margin + innerW / 2;
+      const cy = margin + innerH / 2;
+      const rx = innerW / 2;
+      const ry = innerH / 2;
+
+      for (let i = 0; i < n; i++) {
+        const xUnit = geometry.basePositions.x[i];
+        const yUnit = geometry.basePositions.y[i];
+        px[i] = cx + xUnit * rx;
+        py[i] = cy + yUnit * ry;
+      }
+
+      state.layout.x = px;
+      state.layout.y = py;
+    }
+
+    function stepSimulation(dt) {
+      const { adjacency, phases, freqs, coupling } = state;
+      state._lastSimCoupling = coupling;
+      const n = Math.min(phases.length, freqs.length, adjacency.length, derivatives.length);
+      if (!n) return;
+      const maxNeighbors = 320;
+      const meanDegree = Math.max(1, 1 * state.n);
+      const couplingFactor = coupling;
+      for (let i = 0; i < n; i++) {
+        const neigh = adjacency[i];
+        const count = neigh.length;
+        let s = 0;
+        if (count > maxNeighbors) {
+          const stride = Math.ceil(count / maxNeighbors);
+          let samples = 0;
+          for (let k = 0; k < count; k += stride) {
+            const j = neigh[k];
+            s += Math.sin(phases[j] - phases[i]+ state.density+0.05*k);
+            samples++;
+          }
+          s *= count / Math.max(1, samples);
+        } else {
+          for (let k = 0; k < count; k++) {
+            const j = neigh[k];
+            s += Math.sin(phases[j] - phases[i]+ state.density+0.1*k);
+          }
+        }
+        derivatives[i] = freqs[i] + couplingFactor * s;
+      }
+      for (let i = 0; i < n; i++) {
+        phases[i] += dt * derivatives[i];
+      }
+    }
+
+    function updateOrderParameter() {
+      let x = 0, y = 0;
+      const { phases } = state;
+      const n = phases.length;
+      for (let i = 0; i < n; i++) {
+        x += Math.cos(phases[i]);
+        y += Math.sin(phases[i]);
+      }
+      const r = Math.sqrt(x * x + y * y) / Math.max(1, n);
+      const psi = Math.atan2(y, x);
+      state.order = { r, psi };
+    }
+
+    function logHistory(now) {
+      if (now - state.lastLog < 180) return;
+      state.lastLog = now;
+      const sliderK = parseFloat(couplingInput.value);
+      const stateK = state.coupling;
+      const simK = state._lastSimCoupling;
+      console.log('K debug', {
+        sliderK,
+        stateK,
+        simK,
+        diff_slider_state: sliderK - stateK,
+        diff_state_sim: stateK - simK
+      });
+      state.history.push({ k: state.density, r: state.order.r });
+      if (state.history.length > 2000) state.history.shift();
+    }
+
+    function drawSpring() {
+      const ctx = springCanvas.getContext('2d');
+      const { width, height } = springCanvas.getBoundingClientRect();
+      ctx.clearRect(0, 0, width, height);
+
+      ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+      ctx.lineWidth = 1;
+      const { x: px, y: py } = state.layout;
+      const n = Math.min(state.adjacency.length, px.length, py.length, state.phases.length);
+      if (!n) return;
+
+      const maxEdgesDrawn = 60000;
+      const stride = Math.max(1, Math.floor(Math.max(1, state.edgeCount) / maxEdgesDrawn));
+      let edgeIndex = 0;
+
+      // edges
+      ctx.beginPath();
+      for (let i = 0; i < n; i++) {
+        const neighbors = state.adjacency[i];
+        for (let k = 0; k < neighbors.length; k++) {
+          const j = neighbors[k];
+          if (j <= i) continue;
+          if (edgeIndex % stride === 0) {
+            ctx.moveTo(px[i], py[i]);
+            ctx.lineTo(px[j], py[j]);
+          }
+          edgeIndex++;
+        }
+      }
+      ctx.stroke();
+
+      // nodes as phase satellites on orbits
+      ctx.lineWidth = 0.7;
+      ctx.strokeStyle = 'rgba(255,255,255,0.6)';
+      for (let i = 0; i < n; i++) {
+        const phase = state.phases[i];
+        const hue = ((phase % (Math.PI * 2)) / (Math.PI * 2)) * 360;
+        const cx = px[i];
+        const cy = py[i];
+        const orbit = 3.5 * 1.5;
+
+        // Filled disc to mask incoming edges
+        ctx.fillStyle = springBgColor.trim() || 'rgba(10,20,38,0.95)';
+        ctx.beginPath();
+        ctx.arc(cx, cy, orbit + 1.2, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Orbit trajectory
+        ctx.beginPath();
+        ctx.arc(cx, cy, orbit, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // Satellite
+        const sx = cx + orbit * Math.cos(phase);
+        const sy = cy + orbit * Math.sin(phase);
+        ctx.fillStyle = `hsla(${hue}, 85%, 65%, 0.9)`;
+        ctx.beginPath();
+        ctx.arc(sx, sy, 2.0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function drawCircle() {
+      const ctx = circleCanvas.getContext('2d');
+      const { width, height } = circleCanvas.getBoundingClientRect();
+      ctx.clearRect(0, 0, width, height);
+      const cx = width / 2;
+      const cy = height / 2;
+      const radius = Math.min(width, height) * 0.37;
+
+      // Unit circle
+      ctx.strokeStyle = 'rgba(255,255,255,0.25)';
+      ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+      ctx.stroke();
+
+      ctx.setLineDash([3, 5]);
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius * state.order.r, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(90, 242, 193, 0.2)';
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Nodes colored by frequency, with slight radial jitter
+      const n = state.phases.length;
+      const meanFreq = state.mean;
+      const stdFreq = Math.max(1e-6, state.std);
+      const minFreq = meanFreq - 2 * stdFreq;
+      const maxFreq = meanFreq + 2 * stdFreq;
+
+      for (let i = 0; i < n; i++) {
+        const phase = state.phases[i];
+        const freq = state.freqs[i] ?? meanFreq;
+        const jitter = state.circleRadiusJitter && state.circleRadiusJitter.length === n
+          ? state.circleRadiusJitter[i]
+          : 0;
+        const nodeRadius = radius * (1 + jitter);
+        const x = cx + nodeRadius * Math.cos(phase);
+        const y = cy + nodeRadius * Math.sin(phase);
+        ctx.fillStyle = freqColor(freq, minFreq, maxFreq, 1);
+        ctx.beginPath();
+        ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Order parameter vector
+      const r = state.order.r;
+      const psi = state.order.psi;
+      const ox = cx + radius * r * Math.cos(psi);
+      const oy = cy + radius * r * Math.sin(psi);
+
+      ctx.strokeStyle = orderColor;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(ox, oy);
+      ctx.stroke();
+      ctx.fillStyle = orderColor;
+      ctx.beginPath();
+      ctx.arc(ox, oy, 4, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function drawPhasePlot() {
+      const ctx = phaseCanvas.getContext('2d');
+      const { width, height } = phaseCanvas.getBoundingClientRect();
+      ctx.clearRect(0, 0, width, height);
+      const padLeft = 60;
+      const padRight = 40;
+      const padTop = 40;
+      const padBottom = 52;
+      const maxK = parseFloat(densityInput.max);
+      const xScale = k => padLeft + (k / maxK) * (width - padLeft - padRight);
+      const yScale = r => height - padBottom - r * (height - padTop - padBottom);
+
+      // Axes
+      ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(padLeft, padTop - 8);
+      ctx.lineTo(padLeft, height - padBottom);
+      ctx.lineTo(width - padRight + 8, height - padBottom);
+      ctx.stroke();
+
+      ctx.fillStyle = 'rgba(255,255,255,0.6)';
+      ctx.font = '12px "Avenir Next","Futura","Trebuchet MS",sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('\alpha - phase lag', width / 2, height - padBottom + 32);
+
+      ctx.save();
+      ctx.translate(padLeft - 40, height / 2);
+      ctx.rotate(-Math.PI / 2);
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('r - order parameter', 0, 0);
+      ctx.restore();
+      ctx.textAlign = 'start';
+
+      // Grid lines
+      ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      for (let i = 0; i <= 5; i++) {
+        const y = yScale(i / 5);
+        ctx.moveTo(padLeft, y);
+        ctx.lineTo(width - padRight, y);
+      }
+      for (let i = 0; i <= 6; i++) {
+        const x = xScale((i / 6) * maxK);
+        ctx.moveTo(x, padTop);
+        ctx.lineTo(x, height - padBottom);
+      }
+      ctx.stroke();
+
+      // X ticks
+      ctx.strokeStyle = 'rgba(255,255,255,0.35)';
+      ctx.lineWidth = 1;
+      const tickStep = 0.5;
+      for (let k = 0; k <= maxK + 1e-6; k += tickStep) {
+        const x = xScale(k);
+        ctx.beginPath();
+        ctx.moveTo(x, height - padBottom);
+        ctx.lineTo(x, height - padBottom + 6);
+        ctx.stroke();
+        ctx.fillText(k.toFixed(1), x - 8, height - padBottom + 18);
+      }
+
+      // Y ticks
+      const yTickStep = 0.2;
+      for (let r = 0; r <= 1 + 1e-6; r += yTickStep) {
+        const y = yScale(r);
+        ctx.beginPath();
+        ctx.moveTo(padLeft - 6, y);
+        ctx.lineTo(padLeft, y);
+        ctx.stroke();
+        ctx.fillText(r.toFixed(1), padLeft - 28, y + 4);
+      }
+
+      // Vertical critical line
+      const kc = state.criticalK;
+      if (kc <= maxK) {
+        const kcX = xScale(kc);
+        ctx.setLineDash([6, 6]);
+        ctx.strokeStyle = 'rgba(255,107,107,0.9)';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(kcX, padTop);
+        ctx.lineTo(kcX, height - padBottom);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        ctx.fillStyle = 'rgba(255,107,107,0.9)';
+        const kcLabel = `\alpha_c ≈ ${kc.toFixed(2)}`;
+        ctx.fillText(kcLabel, kcX + 6, padTop + 12);
+      }
+
+      // History scatter
+      ctx.fillStyle = 'rgba(90, 242, 193, 0.08)';
+      for (let i = 0; i < state.history.length; i++) {
+        const { k, r } = state.history[i];
+        const x = xScale(Math.min(maxK, k));
+        const y = yScale(r);
+        ctx.beginPath();
+        ctx.arc(x, y, 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Current point
+      const xNow = xScale(state.density);
+      const yNow = yScale(state.order.r);
+      ctx.fillStyle = 'rgba(90, 242, 193, 0.9)';
+      ctx.beginPath();
+      ctx.arc(xNow, yNow, 5, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.strokeStyle = 'rgba(90, 242, 193, 0.6)';
+      ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.moveTo(xNow, yScale(0));
+      ctx.lineTo(xNow, yNow);
+      ctx.stroke();
+    }
+
+    function loop(now) {
+      const speed = 2.0; // accelerate time passage
+      const dt = Math.min(0.05, (now - lastTime) / 1000) * speed;
+      lastTime = now;
+
+      if (resizeRequested) resizeCanvases();
+      if (needsLayout) {
+        computeLayout();
+        needsLayout = false;
+      }
+
+      advanceCoupling(dt);
+      stepSimulation(dt);
+      updateOrderParameter();
+      logHistory(now);
+
+      drawSpring();
+      drawCircle();
+      drawPhasePlot();
+      updateLabels();
+
+      requestAnimationFrame(loop);
+    }
+
+    function init() {
+      applyInputs();
+      computeCriticalK();
+      rebuildSystem();
+      resizeCanvases();
+      window.addEventListener('resize', () => { resizeRequested = true; });
+
+      [sizeInput, densityInput].forEach(input => {
+        input.addEventListener('input', () => {
+          applyInputs();
+          scheduleRebuild();
+        });
+      });
+
+      [meanInput, stdInput].forEach(input => {
+        input.addEventListener('input', () => {
+          applyInputs();
+          resetFreqs();
+        });
+      });
+
+      couplingInput.addEventListener('input', () => {
+        state.coupling = parseFloat(couplingInput.value);
+        couplingValue.textContent = state.coupling.toFixed(2);
+        setPlaybackSpeed(0);
+      });
+
+      rebuildBtn.addEventListener('click', () => {
+        applyInputs();
+        rebuildSystem({ reseedGeometry: true });
+      });
+
+      resetBtn.addEventListener('click', () => resetPhases());
+
+      clearHistoryBtn.addEventListener('click', () => {
+        state.history = [];
+      });
+
+      playbackButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const mode = btn.dataset.mode;
+          if (mode === 'forward') {
+            setPlaybackSpeed(playback.step);
+          } else if (mode === 'backward') {
+            setPlaybackSpeed(-playback.step);
+          } else if (mode === 'pause') {
+            setPlaybackSpeed(0);
+          } else if (mode === 'accelerate') {
+            accelerateSpeed();
+          } else if (mode === 'decelerate') {
+            decelerateSpeed();
+          }
+        });
+      });
+
+      setPlaybackSpeed(0);
+
+      requestAnimationFrame(loop);
+    }
+
+    init();
+  </script>
+</body>
+</html>

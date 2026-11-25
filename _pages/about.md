@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Research Specialist @ <a href='https://www.rd.ntt/brl/group_introduction/ryouron-g/'>NTT Basic Research Laboratory</a>.
+subtitle: Research Specialist @ <a href='https://www.rd.ntt/brl/group_introduction/butsume-g/'>NTT Basic Research Laboratory</a>.
 
 profile:
   align: right
